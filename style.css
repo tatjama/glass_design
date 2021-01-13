@@ -3,8 +3,8 @@
     --secondary-color:#70B5FF;
     --secondary-color_dark: #3AB1DE;
     --main-color:#37F2FA;
-    --text-color_dark:rgb(42, 29, 116);
-    --text-color_light: rgb(102, 88, 173);
+    --text-color_dark:rgba(42, 29, 116, 0.7);
+    --text-color_light: rgb(102, 88, 173, 0.7);
 }
 *{
     padding: 0;
@@ -29,6 +29,8 @@ h3{
     overflow: hidden;
 }
 .back-layer__circle{
+    border-top: 5px solid rgba(255,255,255,0.4);
+    border-left: 5px solid rgba(255,255,255,0.4);   
     width: 600px;
     height:600px;
     background-image: linear-gradient(to bottom, var(--primary-color) , var(--secondary-color_dark)80%);
@@ -90,10 +92,7 @@ h3{
     display:flex;
     overflow: hidden;
     background-image: linear-gradient(to bottom right,rgba(255,255,255, 0.7), rgba(255,255,255,0.2)30%);
-    backdrop-filter: blur(28px);
-    /*filter: drop-shadow(10px 10px 10px);
-    */
-    border-top: 5px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(28px);border-top: 5px solid rgba(255,255,255,0.4);
     border-left: 5px solid rgba(255,255,255,0.4);
     border-radius: 30px;
     width: 66%;
@@ -147,6 +146,7 @@ h3{
 .glass-layer__img--platform{
     width: 24px;
     height: 24px;
+    opacity: 0.7;
 }
 .glass-layer__intro{
     width: 180px;
@@ -205,15 +205,21 @@ h1{
     color: var(--text-color_light);
     font-size: small;
 }
-.glass-layer__item{ 
-    padding: 10px; 
-    background-color: aliceblue; 
-    margin: 10px 0px; 
-    border-radius: 30px; 
-    -webkit-border-radius: 30px; 
-    -moz-border-radius: 30px; 
-    -ms-border-radius: 30px; 
+.glass-layer__item{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(255,255,255, 1));
+    opacity: 0.9;
+    margin: 10px 0px;
+    filter:drop-shadow(var(--text-color_light) 5px 5px 5px);
+    border-top: 5px solid rgba(255,255,255,0.4);
+    border-left: 5px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    -webkit-filter:drop-shadow(var(--text-color_light) 5px 5px 5px);
 }
 .glass-layer__img--item{
     width: 100px;
