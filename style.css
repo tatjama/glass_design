@@ -3,6 +3,8 @@
     --secondary-color:#70B5FF;
     --secondary-color_dark: #3AB1DE;
     --main-color:#37F2FA;
+    --text-color_dark:rgb(42, 29, 116);
+    --text-color_light: rgb(102, 88, 173);
 }
 *{
     padding: 0;
@@ -18,7 +20,7 @@ body{
 }
 h3{
     margin: 7px 0px;
-    color: rgb(27, 21, 59);
+    color:var(--text-color_dark);
 }
 .back-layer{
     background-image: linear-gradient(to bottom left,var(--primary-color), var(--secondary-color));
@@ -29,12 +31,15 @@ h3{
 .back-layer__circle{
     width: 600px;
     height:600px;
-    background-color: grey;
     background-image: linear-gradient(to bottom, var(--primary-color) , var(--secondary-color_dark)80%);
     opacity: 0.5;
     filter: blur(25px);
     border-radius:50%;
     -webkit-filter: blur(25px);
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
 }
 .back-layer__circle--left{
     position: absolute;
@@ -86,7 +91,8 @@ h3{
     overflow: hidden;
     background-image: linear-gradient(to bottom right,rgba(255,255,255, 0.7), rgba(255,255,255,0.2)30%);
     backdrop-filter: blur(28px);
-    /*filter: drop-shadow(10px 10px 10px);*/
+    /*filter: drop-shadow(10px 10px 10px);
+    */
     border-top: 5px solid rgba(255,255,255,0.4);
     border-left: 5px solid rgba(255,255,255,0.4);
     border-radius: 30px;
@@ -100,10 +106,10 @@ h3{
     -moz-transform:translate(-50%, -50%);
     -ms-transform:translate(-50%, -50%);
     -o-transform:translate(-50%, -50%);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
 }
 
 .glass-layer__menu{
@@ -129,7 +135,7 @@ h3{
     -o-border-radius:50%;
 }
 .glass-layer__p{
-    color: rgb(127, 119, 168);
+    color:var(--text-color_light);
     font-weight:bold;    
 }
 .glass-layer__platform{
@@ -154,10 +160,11 @@ h3{
     -ms-border-radius:30px;
     -o-border-radius:30px;
 }
-.glass-layer__h2--intro{
+.glass-layer__h3--intro{
     width: 45%;
-    padding:25px 5px;
+    padding:25px 10px;
     color: aliceblue;
+    font-weight: bolder;
 }
 .glass-layer__img--intro{
     width: 50%;
@@ -166,4 +173,54 @@ h3{
 .glass-layer__description{
     width: 75%;
     height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1{
+    font-size:xx-large;
+    color: var(--text-color_dark);
+}
+.glass-layer__input--search{
+    font-size: large;
+    color: var(--text-color_dark);
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.1)40%);
+    outline: none;
+    border: none;
+    border-top: 5px solid rgba(255,255,255,0.4);
+    border-left: 5px solid rgba(255,255,255,0.4);
+    background-image: url("./images/iconmonstr-magnifier-4-48.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+.glass-layer__input--search::placeholder{
+    color: var(--text-color_light);
+    font-size: small;
+}
+.glass-layer__item{ 
+    padding: 10px; 
+    background-color: aliceblue; 
+    margin: 10px 0px; 
+    border-radius: 30px; 
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    -ms-border-radius: 30px; 
+    -o-border-radius: 30px;
+}
+.glass-layer__img--item{
+    width: 100px;
+    height: 70px;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
 }
