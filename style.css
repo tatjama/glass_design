@@ -13,9 +13,7 @@ htm,
 body{
     font-family: 'Poppins', sans-serif;   
     overflow-x: hidden; 
-    font-size: 0.6em;
-    color: rgb(127, 119, 168);
-    font-weight:bold;
+    font-size: 0.67em;
     overflow: hidden;
 }
 h3{
@@ -115,6 +113,9 @@ h3{
     object-fit: cover;
     padding: 40px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .glass-layer__img--user{
     width: 70px;
@@ -127,15 +128,40 @@ h3{
     -ms-border-radius:50%;
     -o-border-radius:50%;
 }
-.glass-layer__platforms{
+.glass-layer__p{
+    color: rgb(127, 119, 168);
+    font-weight:bold;    
+}
+.glass-layer__platform{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 5px 50px;
 }
-.glass-layer__img--icon{
-    width:30px;
-    height:30px;
+.glass-layer__img--platform{
+    width: 24px;
+    height: 24px;
+}
+.glass-layer__intro{
+    width: 180px;
+    height: 120px;
+    background-image: linear-gradient(to bottom left,var(--primary-color), var(--secondary-color)60%);
+    margin: 0 auto;
+    display: flex;
+    border-radius:30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
+}
+.glass-layer__h2--intro{
+    width: 45%;
+    padding:25px 5px;
+    color: aliceblue;
+}
+.glass-layer__img--intro{
+    width: 50%;
+    height: auto;
 }
 .glass-layer__description{
     width: 75%;
