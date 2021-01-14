@@ -25,6 +25,11 @@ body{
     overflow: hidden;
     background-size: cover;
 }
+.back-layer__circles--left{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
 .back-layer__circles--right{
     width: 500px;
     height: 300px;
