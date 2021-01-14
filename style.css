@@ -27,7 +27,7 @@ body{
 }
 .back-layer__circles--left{
     width: 500px;
-    height: 300px;
+    height: 500px;
     overflow: hidden;
 }
 .back-layer__circles--right{
@@ -50,15 +50,16 @@ body{
     filter: blur(25px);
     border-radius:50%;
     -webkit-filter: blur(25px);
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    -ms-border-radius:50%;
-    -o-border-radius:50%;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 .back-layer__circle--left{
-    position: absolute;
-    top:-100px;
+    position: relative;
+    top: -100px;
     left: -100px;
+    padding-bottom: 50px;
     transform: rotate(-60deg);
     -webkit-transform: rotate(-60deg);
     -moz-transform: rotate(-60deg);
@@ -352,7 +353,7 @@ body{
      width: 100%;
  }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 568px){
 .menu{
     height: 180px;
 }
